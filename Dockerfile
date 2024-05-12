@@ -1,6 +1,8 @@
-FROM ubuntu:20.10
+FROM ubuntu:24.04
 
-RUN apt-get update -y && apt-get install -y python3-pip python-dev
+RUN apt update -y && \
+    apt install -y python3 && \
+    apt install -y python3-pip python3-dev
 
 WORKDIR /app
 

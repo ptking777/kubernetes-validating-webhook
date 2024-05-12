@@ -1,0 +1,9 @@
+# Ignore everything by default
+**
+
+# Allowed exceptions
+!./requirements.txt
+!./validate.py	
+!./wsgi.py
+#!./certs/*.pem
+
