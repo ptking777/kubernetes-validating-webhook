@@ -1,14 +1,14 @@
-FROM ubuntu:24.04
+FROM ubuntu:22.04
 
 RUN apt update -y && \
-    apt install -y python3 && \
-    apt install -y python3-pip python3-dev
+    apt install -y python3-dev && \
+    apt install -y python3-pip 
 
 WORKDIR /app
 
 COPY requirements.txt /app/requirements.txt
 
-RUN pip3 install -r /app/requirements.txt
+RUN pip  install -r requirements.txt
 
 COPY validate.py /app
 
