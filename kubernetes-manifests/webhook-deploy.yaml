@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webhook
-        image: kmitevski/webhook:gunicorn
+        image: ptking777/webhook:gunicorn
         ports:
         - containerPort: 443
         env:
