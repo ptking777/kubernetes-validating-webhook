@@ -5,9 +5,9 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 RUN pip3 install -r /app/requirements.txt
 
-COPY gunicorn_config.py /app
-COPY validate.py /app
-COPY wsgi.py /app
+COPY ./gunicorn_config.py /app
+COPY ./validate.py /app
+COPY ./wsgi.py /app
 
 EXPOSE 8080
 
