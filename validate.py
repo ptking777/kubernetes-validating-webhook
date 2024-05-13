@@ -39,5 +39,4 @@ def admission_response(allowed, uid, message):
 
 
 if __name__ == '__main__':
-    webhook.run(host='0.0.0.0',
-                port=5000)
+    webhook.run(host='0.0.0.0', port=5000)

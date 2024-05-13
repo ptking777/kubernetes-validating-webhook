@@ -1,0 +1,21 @@
+FROM ubuntu:20.04
+
+RUN apt update -y && \
+    apt install -y python3-dev && \
+    apt install -y python3-pip  && \
+    apt-get install -y gunicorn
+
+WORKDIR /app
+
+COPY requirements.txt /app/requirements.txt
+
+RUN pip3  install -r /app/requirements.txt
+
+COPY validate.py /app
+
+COPY wsgi.py /app
+
+ENTRYPOINT ["gunicorn"]
+CMD [" --bind 0.0.0.0:5000 wsgi:webhook"]
+
+
